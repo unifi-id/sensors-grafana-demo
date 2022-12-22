@@ -1,0 +1,28 @@
+version: '3.5'
+
+services:
+
+  unifi-env-sensors-db:
+    image: postgres:15.0
+    container_name: unifi-env-sensors-db
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./docker/pg/data:/var/lib/postgresql/data
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+
+  unifi-env-sensors-rabbitmq:
+    image: rabbitmq:3.9.21-alpine
+    container_name: unifi-env-sensors-rabbitmq
+    ports:
+      - "5672:5672"
+    environment:
+      - RABBITMQ_DEFAULT_VHOST=/
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest

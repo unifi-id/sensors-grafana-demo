@@ -1,0 +1,9 @@
+flyway.user=
+flyway.password=
+flyway.url=jdbc:driver://host:port/db
+flyway.version=9.6.0
+flyway.defaultSchema=
+flyway.schemas=
+flyway.createSchemas=
+flyway.locations=db/migration
+postgres.version=42.3.7
