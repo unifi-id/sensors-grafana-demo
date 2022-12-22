@@ -47,7 +47,6 @@ services:
     volumes:
       - grafana-storage:/var/lib/grafana
       - ./docker/grafana/conf/defaults.ini:/usr/share/grafana/conf/defaults.ini
-      - ./docker/grafana/jwks.json:/jwks.json
 
   nginx:
     image: nginx:1.23.1-alpine
