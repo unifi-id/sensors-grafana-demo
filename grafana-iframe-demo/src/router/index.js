@@ -19,14 +19,14 @@ const router = createRouter({
       path: '/fora',
       component: GrafanaView,
       props: {
-        url: 'http://grafana.fora.viewer.unifi-id.click/d/HZfg_lcVk/fora-viewer?kiosk=tv',
+        url: 'https://grafana.unifi-id.click/d/qWb5e65Vz/fora-viewer-dashboard?kiosk=tv',
       }
     },
     {
       path: '/groucho',
       component: GrafanaView,
       props: {
-        url: 'http://grafana.groucho.viewer.unifi-id.click/d/aYs2MXcVk/groucho-viewer?kiosk=tv',
+        url: 'https://grafana.unifi-id.click/d/mxdOeec4z/groucho-viewer-dashboard?kiosk=tv',
       }
     }
   ]
