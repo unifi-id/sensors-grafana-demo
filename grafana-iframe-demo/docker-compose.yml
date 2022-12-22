@@ -1,0 +1,16 @@
+version: "3.5"
+
+services:
+
+  unifi-grafana-iframe-demo:
+    container_name: unifi-grafana-iframe-demo
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    networks:
+      - environmental-sensors_default
+
+networks:
+  environmental-sensors_default:
+    external: true
