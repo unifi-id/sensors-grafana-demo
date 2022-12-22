@@ -8,9 +8,8 @@ services:
       context: .
       dockerfile: Dockerfile
     restart: always
-    networks:
-      - environmental-sensors_default
 
 networks:
-  environmental-sensors_default:
+  default:
+    name: sensors-grafana-demo-network
     external: true
